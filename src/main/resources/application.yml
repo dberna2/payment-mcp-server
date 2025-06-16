@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: @project.artifactId@
+  main:
+    web-application-type: none
+    banner-mode: off
+
+logging:
+  level:
+    root: off

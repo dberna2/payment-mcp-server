@@ -1,0 +1,16 @@
+{
+  "name": "getCustomerPaymentHistory",
+  "description": "Get all customer payment history",
+  "schema": {
+    "type": "object",
+    "id": "urn:jsonschema:Operation",
+    "properties": {
+      "customerId": {
+        "type": "string",
+        "description": "customer identifier",
+        "examples": ["316c76b1-b6d5-4531-b6be-75d0782a400a"]
+      }
+    },
+    "required": ["customerId"]
+  }
+}
