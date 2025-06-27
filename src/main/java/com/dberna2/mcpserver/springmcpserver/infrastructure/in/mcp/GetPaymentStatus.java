@@ -30,7 +30,7 @@ public final class GetPaymentStatus implements ToolSpecification {
 
   @Override
   public SyncToolSpecification getToolSpecification() {
-    final Tool tool = toolDefinitions.get("getPaymentStatus");
+    final Tool tool = this.toolDefinitions.get("getPaymentStatus");
     return new SyncToolSpecification(tool, this.buildCallToolResult());
   }
 
@@ -38,9 +38,8 @@ public final class GetPaymentStatus implements ToolSpecification {
     return (exchange, args) -> {
 
       final String paymentId = (String) args.get("paymentId");
-      final String paymentStatus = (String) args.get("paymentStatus");
 
-      final Payment response = this.paymentStatusFinder.execute(paymentId, paymentStatus);
+      final Payment response = this.paymentStatusFinder.execute(paymentId);
 
       final List<Content> contents = new ArrayList<>();
       contents.add(new TextContent(response.toString()));

@@ -29,7 +29,7 @@ public final class GetCustomerPaymentHistory implements ToolSpecification {
 
   @Override
   public SyncToolSpecification getToolSpecification() {
-    final Tool tool = toolDefinitions.get("getCustomerPaymentHistory");
+    final Tool tool = this.toolDefinitions.get("getCustomerPaymentHistory");
     return new SyncToolSpecification(tool, this.buildCallToolResult());
   }
 
