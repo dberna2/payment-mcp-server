@@ -14,7 +14,7 @@ public class PaymentStatusFinder {
     this.paymentRepository = paymentRepository;
   }
 
-  public Payment execute(final String paymentId) {
+  public Payment execute(final String paymentId, final String paymentStatus) {
     return this.paymentRepository.findBy(paymentId)
         .orElseThrow(() -> new PaymentNotFound(paymentId));
   }

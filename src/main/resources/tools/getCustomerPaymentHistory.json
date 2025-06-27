@@ -3,7 +3,6 @@
   "description": "Get all customer payment history",
   "schema": {
     "type": "object",
-    "id": "urn:jsonschema:Operation",
     "properties": {
       "customerId": {
         "type": "string",

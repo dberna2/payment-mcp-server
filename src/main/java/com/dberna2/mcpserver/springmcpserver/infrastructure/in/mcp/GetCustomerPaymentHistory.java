@@ -37,8 +37,9 @@ public final class GetCustomerPaymentHistory implements ToolSpecification {
     return (exchange, args) -> {
 
       final String customerId = (String) args.get("customerId");
+      final String paymentStatus = (String) args.get("paymentStatus");
 
-      final List<Payment> payments = this.customerPaymentHistoryFinder.execute(customerId);
+      final List<Payment> payments = this.customerPaymentHistoryFinder.execute(customerId, paymentStatus);
 
       final List<Content> contents = new ArrayList<>();
       for (final Payment payment : payments) {
