@@ -7,8 +7,14 @@
     "properties": {
       "customerId": {
         "type": "string",
-        "description": "customer identifier",
+        "description": "Customer identifier",
         "examples": ["316c76b1-b6d5-4531-b6be-75d0782a400a"]
+      },
+      "paymentStatus": {
+        "type": "string",
+        "enum": ["PENDING", "AUTHORIZED", "CANCELLED"],
+        "description": "Payment status used to filter the results",
+        "default": null
       }
     },
     "required": ["customerId"]

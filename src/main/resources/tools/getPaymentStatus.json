@@ -1,9 +1,8 @@
 {
-    "name": "getPaymentStatus",
+  "name": "getPaymentStatus",
   "description": "Get the payment status by its identifier",
   "schema": {
     "type": "object",
-    "id": "urn:jsonschema:Operation",
     "properties": {
       "paymentId": {
         "type": "string",
