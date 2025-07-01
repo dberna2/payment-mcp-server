@@ -7,7 +7,7 @@
       "customerId": {
         "type": "string",
         "description": "Customer identifier",
-        "examples": ["316c76b1-b6d5-4531-b6be-75d0782a400a"]
+        "examples": ["1", "2"]
       },
       "paymentStatus": {
         "type": "string",
